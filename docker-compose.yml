@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  grass-1:
+    container_name: grass-1
+    build: .
+    networks:
+      - net
+
+  grass-2:
+    container_name: grass-2
+    build: .
+    networks:
+      - net
+
+  grass-3:
+    container_name: grass-3
+    build: .
+    networks:
+      - net
+
+networks:
+  net:
+    name: grass-net
+    driver: bridge
